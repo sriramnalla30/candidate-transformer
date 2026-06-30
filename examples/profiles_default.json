@@ -1,0 +1,506 @@
+[
+  {
+    "candidate_id": "cand_c92ecb5093",
+    "full_name": "Anita Desai",
+    "emails": [
+      "anita.desai@gmail.com"
+    ],
+    "phones": [
+      "+14155550199"
+    ],
+    "location": {
+      "city": null,
+      "region": null,
+      "country": null
+    },
+    "links": {
+      "linkedin": null,
+      "github": null,
+      "portfolio": null,
+      "other": []
+    },
+    "headline": "Product Engineer",
+    "years_experience": null,
+    "skills": [],
+    "experience": [
+      {
+        "company": "Stripe",
+        "title": "Product Engineer",
+        "start": null,
+        "end": null,
+        "summary": null
+      }
+    ],
+    "education": [],
+    "overall_confidence": 0.9,
+    "provenance": [
+      {
+        "field": "full_name",
+        "source": "recruiter_csv",
+        "method": "exact",
+        "value": "Anita Desai"
+      },
+      {
+        "field": "emails[0]",
+        "source": "recruiter_csv",
+        "method": "normalized",
+        "value": "anita.desai@gmail.com"
+      },
+      {
+        "field": "phones[0]",
+        "source": "recruiter_csv",
+        "method": "normalized",
+        "value": "+14155550199"
+      },
+      {
+        "field": "headline",
+        "source": "recruiter_csv",
+        "method": "exact",
+        "value": "Product Engineer"
+      },
+      {
+        "field": "experience.Stripe",
+        "source": "recruiter_csv",
+        "method": "exact",
+        "value": "Stripe"
+      }
+    ]
+  },
+  {
+    "candidate_id": "cand_443c362250",
+    "full_name": "Priya Sharma",
+    "emails": [
+      "priya.sharma@gmail.com"
+    ],
+    "phones": [
+      "+919876543210"
+    ],
+    "location": {
+      "city": "Bengaluru",
+      "region": null,
+      "country": "IN"
+    },
+    "links": {
+      "linkedin": null,
+      "github": "https://github.com/priyasharma",
+      "portfolio": "https://priyasharma.dev",
+      "other": []
+    },
+    "headline": "Senior Software Engineer",
+    "years_experience": 6,
+    "skills": [
+      {
+        "name": "Distributed Systems",
+        "confidence": 1.0,
+        "sources": [
+          "github",
+          "recruiter_notes",
+          "resume"
+        ]
+      },
+      {
+        "name": "Go",
+        "confidence": 1.0,
+        "sources": [
+          "github",
+          "recruiter_notes",
+          "resume"
+        ]
+      },
+      {
+        "name": "Python",
+        "confidence": 1.0,
+        "sources": [
+          "github",
+          "recruiter_notes",
+          "resume"
+        ]
+      },
+      {
+        "name": "Kubernetes",
+        "confidence": 0.9,
+        "sources": [
+          "recruiter_notes",
+          "resume"
+        ]
+      },
+      {
+        "name": "AWS",
+        "confidence": 0.75,
+        "sources": [
+          "resume"
+        ]
+      },
+      {
+        "name": "Docker",
+        "confidence": 0.75,
+        "sources": [
+          "github"
+        ]
+      },
+      {
+        "name": "PostgreSQL",
+        "confidence": 0.75,
+        "sources": [
+          "resume"
+        ]
+      },
+      {
+        "name": "Redis",
+        "confidence": 0.75,
+        "sources": [
+          "resume"
+        ]
+      },
+      {
+        "name": "Shell",
+        "confidence": 0.75,
+        "sources": [
+          "github"
+        ]
+      },
+      {
+        "name": "gRPC",
+        "confidence": 0.75,
+        "sources": [
+          "resume"
+        ]
+      }
+    ],
+    "experience": [
+      {
+        "company": "Flipkart",
+        "title": "Senior Software Engineer",
+        "start": "2021-01",
+        "end": "present",
+        "summary": "Led the payments reconciliation service handling millions of transactions per day. Reduced p99 latency by 40% by redesigning the settlement pipeline."
+      },
+      {
+        "company": "Amazon",
+        "title": "Software Engineer",
+        "start": "2018-07",
+        "end": "2020-12",
+        "summary": "Worked on the catalog search indexing pipeline."
+      }
+    ],
+    "education": [
+      {
+        "institution": "IIT Bombay",
+        "degree": "B.Tech",
+        "field": "Computer Science",
+        "end_year": 2018
+      }
+    ],
+    "overall_confidence": 0.92,
+    "provenance": [
+      {
+        "field": "full_name",
+        "source": "recruiter_csv",
+        "method": "exact",
+        "value": "Priya Sharma"
+      },
+      {
+        "field": "emails[0]",
+        "source": "recruiter_csv",
+        "method": "normalized",
+        "value": "priya.sharma@gmail.com"
+      },
+      {
+        "field": "phones[0]",
+        "source": "recruiter_csv",
+        "method": "normalized",
+        "value": "+919876543210"
+      },
+      {
+        "field": "location.city",
+        "source": "ats_json",
+        "method": "normalized",
+        "value": "Bengaluru"
+      },
+      {
+        "field": "location.country",
+        "source": "ats_json",
+        "method": "normalized",
+        "value": "IN"
+      },
+      {
+        "field": "links.github",
+        "source": "github",
+        "method": "normalized",
+        "value": "https://github.com/priyasharma"
+      },
+      {
+        "field": "links.portfolio",
+        "source": "github",
+        "method": "normalized",
+        "value": "https://priyasharma.dev"
+      },
+      {
+        "field": "headline",
+        "source": "recruiter_csv",
+        "method": "exact",
+        "value": "Senior Software Engineer"
+      },
+      {
+        "field": "years_experience",
+        "source": "ats_json",
+        "method": "exact",
+        "value": 6
+      },
+      {
+        "field": "skills.Distributed Systems",
+        "source": "github",
+        "method": "llm",
+        "value": "Distributed Systems"
+      },
+      {
+        "field": "skills.Distributed Systems",
+        "source": "recruiter_notes",
+        "method": "llm",
+        "value": "Distributed Systems"
+      },
+      {
+        "field": "skills.Distributed Systems",
+        "source": "resume",
+        "method": "llm",
+        "value": "Distributed Systems"
+      },
+      {
+        "field": "skills.Go",
+        "source": "github",
+        "method": "llm",
+        "value": "Go"
+      },
+      {
+        "field": "skills.Go",
+        "source": "recruiter_notes",
+        "method": "llm",
+        "value": "Go"
+      },
+      {
+        "field": "skills.Go",
+        "source": "resume",
+        "method": "llm",
+        "value": "Go"
+      },
+      {
+        "field": "skills.Python",
+        "source": "github",
+        "method": "llm",
+        "value": "Python"
+      },
+      {
+        "field": "skills.Python",
+        "source": "recruiter_notes",
+        "method": "llm",
+        "value": "Python"
+      },
+      {
+        "field": "skills.Python",
+        "source": "resume",
+        "method": "llm",
+        "value": "Python"
+      },
+      {
+        "field": "skills.Kubernetes",
+        "source": "recruiter_notes",
+        "method": "llm",
+        "value": "Kubernetes"
+      },
+      {
+        "field": "skills.Kubernetes",
+        "source": "resume",
+        "method": "llm",
+        "value": "Kubernetes"
+      },
+      {
+        "field": "skills.AWS",
+        "source": "resume",
+        "method": "llm",
+        "value": "AWS"
+      },
+      {
+        "field": "skills.Docker",
+        "source": "github",
+        "method": "llm",
+        "value": "Docker"
+      },
+      {
+        "field": "skills.PostgreSQL",
+        "source": "resume",
+        "method": "llm",
+        "value": "PostgreSQL"
+      },
+      {
+        "field": "skills.Redis",
+        "source": "resume",
+        "method": "llm",
+        "value": "Redis"
+      },
+      {
+        "field": "skills.Shell",
+        "source": "github",
+        "method": "llm",
+        "value": "Shell"
+      },
+      {
+        "field": "skills.gRPC",
+        "source": "resume",
+        "method": "llm",
+        "value": "gRPC"
+      },
+      {
+        "field": "experience.Flipkart",
+        "source": "recruiter_csv",
+        "method": "exact",
+        "value": "Flipkart"
+      },
+      {
+        "field": "experience.Flipkart",
+        "source": "ats_json",
+        "method": "exact",
+        "value": "Flipkart"
+      },
+      {
+        "field": "experience.Flipkart",
+        "source": "github",
+        "method": "exact",
+        "value": "Flipkart"
+      },
+      {
+        "field": "experience.Flipkart",
+        "source": "resume",
+        "method": "llm",
+        "value": "Flipkart"
+      },
+      {
+        "field": "experience.Amazon",
+        "source": "resume",
+        "method": "llm",
+        "value": "Amazon"
+      },
+      {
+        "field": "experience.Amazon",
+        "source": "recruiter_notes",
+        "method": "llm",
+        "value": "Amazon"
+      },
+      {
+        "field": "education.IIT Bombay",
+        "source": "ats_json",
+        "method": "exact",
+        "value": "IIT Bombay"
+      },
+      {
+        "field": "education.IIT Bombay",
+        "source": "resume",
+        "method": "llm",
+        "value": "IIT Bombay"
+      }
+    ]
+  },
+  {
+    "candidate_id": "cand_851ca26d50",
+    "full_name": "Rahul Verma",
+    "emails": [
+      "rahul.verma@outlook.com"
+    ],
+    "phones": [
+      "+919123456780"
+    ],
+    "location": {
+      "city": "Gurugram",
+      "region": null,
+      "country": "IN"
+    },
+    "links": {
+      "linkedin": null,
+      "github": null,
+      "portfolio": null,
+      "other": []
+    },
+    "headline": "Backend Engineer",
+    "years_experience": 4,
+    "skills": [],
+    "experience": [
+      {
+        "company": "Zomato",
+        "title": "Backend Engineer",
+        "start": null,
+        "end": null,
+        "summary": null
+      }
+    ],
+    "education": [
+      {
+        "institution": "Delhi Technological University",
+        "degree": "B.Tech",
+        "field": "Information Technology",
+        "end_year": 2020
+      }
+    ],
+    "overall_confidence": 0.93,
+    "provenance": [
+      {
+        "field": "full_name",
+        "source": "recruiter_csv",
+        "method": "exact",
+        "value": "Rahul Verma"
+      },
+      {
+        "field": "emails[0]",
+        "source": "recruiter_csv",
+        "method": "normalized",
+        "value": "rahul.verma@outlook.com"
+      },
+      {
+        "field": "phones[0]",
+        "source": "recruiter_csv",
+        "method": "normalized",
+        "value": "+919123456780"
+      },
+      {
+        "field": "location.city",
+        "source": "ats_json",
+        "method": "normalized",
+        "value": "Gurugram"
+      },
+      {
+        "field": "location.country",
+        "source": "ats_json",
+        "method": "normalized",
+        "value": "IN"
+      },
+      {
+        "field": "headline",
+        "source": "recruiter_csv",
+        "method": "exact",
+        "value": "Backend Engineer"
+      },
+      {
+        "field": "years_experience",
+        "source": "ats_json",
+        "method": "exact",
+        "value": 4
+      },
+      {
+        "field": "experience.Zomato",
+        "source": "recruiter_csv",
+        "method": "exact",
+        "value": "Zomato"
+      },
+      {
+        "field": "experience.Zomato",
+        "source": "ats_json",
+        "method": "exact",
+        "value": "Zomato"
+      },
+      {
+        "field": "education.Delhi Technological University",
+        "source": "ats_json",
+        "method": "exact",
+        "value": "Delhi Technological University"
+      }
+    ]
+  }
+]

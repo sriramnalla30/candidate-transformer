@@ -3,6 +3,9 @@
 Turns messy candidate data from many sources into one clean, deduplicated, confidence-scored
 canonical profile per candidate — with full provenance and a runtime-configurable output.
 
+> **Design doc:** [`NallaSriRam_sriramnalla30@gmail.com_Eightfold.pdf`](./NallaSriRam_sriramnalla30@gmail.com_Eightfold.pdf) (one-page Stage-1 design).
+> **Produced output on the sample inputs** is checked in under [`examples/`](./examples) — `profiles_default.json` (default schema) and `profiles_custom.json` (custom config), regenerable via `python run_demo.py`.
+
 ## What it does
 - Ingests **structured** sources (Recruiter CSV, ATS JSON) and **unstructured** sources (Resume
   `.txt`/`.pdf`, Recruiter notes, GitHub profile).
