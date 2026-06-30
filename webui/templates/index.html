@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Candidate Data Transformer</title>
+  <style>
+    :root { --line: #000; --muted: #555; --bg: #fff; --soft: #f4f4f4; }
+    * { box-sizing: border-box; }
+    body { font-family: ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+           max-width: 1000px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem;
+           color: #000; background: var(--bg); line-height: 1.5; }
+    header { border-bottom: 2px solid var(--line); padding-bottom: 1rem; margin-bottom: 1.75rem; }
+    h1 { font-size: 1.6rem; margin: 0 0 .35rem; letter-spacing: -.01em; }
+    h2 { font-size: 1.1rem; margin: 2rem 0 .75rem; padding-bottom: .35rem;
+         border-bottom: 1px solid var(--line); }
+    p.lead { color: var(--muted); margin: 0; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+    @media (max-width: 680px) { .grid { grid-template-columns: 1fr; } }
+    fieldset { border: 1px solid var(--line); border-radius: 4px; margin: 0; padding: 1rem 1.1rem 1.15rem; }
+    legend { font-weight: 700; padding: 0 .45rem; font-size: .92rem;
+             text-transform: uppercase; letter-spacing: .04em; }
+    label.file { display: flex; align-items: center; gap: .55rem; margin: .35rem 0;
+                 font-size: .95rem; cursor: pointer; }
+    label.file:hover { color: var(--muted); }
+    input[type=checkbox] { accent-color: #000; width: 1rem; height: 1rem; }
+    select { padding: .45rem .55rem; border: 1px solid var(--line); border-radius: 4px;
+             background: #fff; font-size: .95rem; width: 100%; color: #000; }
+    .hint { color: var(--muted); font-size: .82rem; margin: .6rem 0 0; }
+    button { background: #000; color: #fff; border: 1px solid #000; border-radius: 4px;
+             padding: .7rem 1.4rem; font-size: .98rem; font-weight: 600; cursor: pointer;
+             margin-top: 1rem; transition: background .12s, color .12s; }
+    button:hover { background: #fff; color: #000; }
+    table { border-collapse: collapse; width: 100%; margin: .5rem 0 1rem; font-size: .95rem; }
+    th, td { border: 1px solid var(--line); padding: .55rem .7rem; text-align: left; }
+    th { background: #000; color: #fff; font-weight: 600; }
+    tbody tr:nth-child(even) { background: var(--soft); }
+    .bar { display: inline-block; height: .7rem; background: #000; vertical-align: middle;
+           margin-right: .5rem; min-width: 2px; }
+    pre { background: #fff; color: #000; padding: 1rem; border: 1px solid var(--line);
+          border-radius: 4px; overflow: auto; max-height: 480px; font-size: .82rem;
+          font-family: ui-monospace, "Cascadia Code", Consolas, monospace; }
+    .note { border: 1px solid var(--line); border-left: 5px solid #000; background: var(--soft);
+            padding: .65rem .85rem; border-radius: 4px; font-size: .88rem; margin: 1rem 0; }
+    .err { border: 1px solid #000; background: #000; color: #fff; padding: .7rem .9rem;
+           border-radius: 4px; font-size: .92rem; margin-bottom: 1rem; }
+    .err::before { content: "✕  "; font-weight: 700; }
+    ul.warns { margin: .4rem 0 0; padding-left: 1.2rem; }
+    ul.warns li { margin: .15rem 0; }
+    footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line);
+             color: var(--muted); font-size: .8rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Multi-Source Candidate Data Transformer</h1>
+    <p class="lead">Select input files and a config, then build canonical profiles. Same engine as the CLI.</p>
+  </header>
+
+  {% if error %}<p class="err">{{ error }}</p>{% endif %}
+
+  <form method="post" action="/run">
+    <div class="grid">
+      <fieldset>
+        <legend>Input files</legend>
+        {% for f in files %}
+          <label class="file">
+            <input type="checkbox" name="inputs" value="{{ f }}"
+              {% if f in selected or not selected %}checked{% endif %}> {{ f }}
+          </label>
+        {% endfor %}
+        <p class="hint">from <code>data/sample_inputs/</code> &mdash; mix structured + unstructured to see merging.</p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Config</legend>
+        <select name="config">
+          {% for c in configs %}
+            <option value="{{ c }}" {% if c == chosen_config %}selected{% endif %}>{{ c }}</option>
+          {% endfor %}
+        </select>
+        <p class="hint">The config reshapes the output (fields, renames, normalization, on-missing) &mdash; no code changes.</p>
+        <button type="submit">Build profiles</button>
+      </fieldset>
+    </div>
+  </form>
+
+  {% if table is not none %}
+    <h2>Candidates ({{ table|length }})</h2>
+    {% if table %}
+    <table>
+      <thead><tr><th>Name</th><th>Overall confidence</th></tr></thead>
+      <tbody>
+      {% for row in table %}
+        <tr>
+          <td>{{ row.name }}</td>
+          <td>
+            {% if row.confidence is not none %}
+              <span class="bar" style="width: {{ (row.confidence * 120)|round|int }}px;"></span>{{ row.confidence }}
+            {% else %}&mdash;{% endif %}
+          </td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+      <p class="note">No candidates produced from the selected inputs.</p>
+    {% endif %}
+  {% endif %}
+
+  {% if warnings %}
+    <div class="note">
+      <strong>{{ warnings|length }} warning(s)</strong> &mdash; the run continued (robust by design):
+      <ul class="warns">{% for w in warnings %}<li>{{ w }}</li>{% endfor %}</ul>
+    </div>
+  {% endif %}
+
+  {% if result_json %}
+    <h2>Output JSON</h2>
+    <pre>{{ result_json }}</pre>
+  {% endif %}
+
+  <footer>Deterministic &amp; explainable &middot; every field traceable to a source and method.</footer>
+</body>
+</html>

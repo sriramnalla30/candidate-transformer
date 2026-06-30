@@ -1,0 +1,30 @@
+{
+  "candidates": [
+    {
+      "fullName": "Priya S.",
+      "emailAddress": "Priya.Sharma@gmail.com",
+      "mobile": "9876543210",
+      "companyName": "Flipkart",
+      "jobTitle": "Sr. Software Engineer",
+      "yearsExp": 6,
+      "locationCity": "Bengaluru",
+      "locationCountry": "India",
+      "schools": [
+        { "name": "IIT Bombay", "degree": "B.Tech", "field": "Computer Science", "gradYear": 2018 }
+      ]
+    },
+    {
+      "fullName": "Rahul Verma",
+      "emailAddress": "rahul.verma@outlook.com",
+      "mobile": "+91 91234 56780",
+      "companyName": "Zomato",
+      "jobTitle": "Backend Engineer",
+      "yearsExp": 4,
+      "locationCity": "Gurugram",
+      "locationCountry": "IN",
+      "schools": [
+        { "name": "Delhi Technological University", "degree": "B.Tech", "field": "Information Technology", "gradYear": 2020 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+name,email,phone,current_company,title
+Priya Sharma,priya.sharma@gmail.com,+91 98765 43210,Flipkart,Senior Software Engineer
+Rahul Verma,rahul.verma@outlook.com,9123456780,Zomato,Backend Engineer
+,broken-row-no-name@x,not-a-phone,,
+Anita Desai,anita.desai@gmail.com,+1 (415) 555-0199,Stripe,Product Engineer

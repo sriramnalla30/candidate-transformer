@@ -1,0 +1,7 @@
+Call notes - 12 June
+
+Spoke with Priya Sharma today. ~6 yrs experience, very strong in distributed systems and Go.
+She mentioned she's currently at Amazon (note: her resume and our CSV say Flipkart - need to
+double check, possible conflict). Open to relocating, currently based in Bangalore.
+Reachable on 9876543210 or priya.sharma@gmail.com.
+Keen on backend / platform roles. Knows Python, Go, Kubernetes well.

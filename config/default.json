@@ -1,0 +1,19 @@
+{
+  "_comment": "Default config: full canonical profile with provenance + confidence. Same shape as the canonical record.",
+  "fields": [
+    { "path": "candidate_id", "type": "string" },
+    { "path": "full_name", "type": "string", "required": true },
+    { "path": "emails", "type": "string[]" },
+    { "path": "phones", "type": "string[]", "normalize": "E164" },
+    { "path": "location", "type": "object" },
+    { "path": "links", "type": "object" },
+    { "path": "headline", "type": "string" },
+    { "path": "years_experience", "type": "number" },
+    { "path": "skills", "type": "object[]", "normalize": "canonical" },
+    { "path": "experience", "type": "object[]" },
+    { "path": "education", "type": "object[]" }
+  ],
+  "include_confidence": true,
+  "include_provenance": true,
+  "on_missing": "null"
+}

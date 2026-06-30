@@ -1,0 +1,14 @@
+# Secrets — never commit your Groq key
+.env
+
+# Generated output
+output/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+.venv/
+venv/

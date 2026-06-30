@@ -1,0 +1,22 @@
+PRIYA SHARMA
+Senior Software Engineer
+Email: priya.sharma@gmail.com | Phone: +91 98765 43210 | Bengaluru, India
+GitHub: github.com/priyasharma
+
+SUMMARY
+Backend engineer with around 6 years of experience building scalable, distributed payment and
+search systems. Strong in Python and Go.
+
+SKILLS
+Python, Go, Kubernetes, PostgreSQL, Distributed Systems, gRPC, Redis, AWS
+
+EXPERIENCE
+Senior Software Engineer, Flipkart — Jan 2021 to Present
+  - Led the payments reconciliation service handling millions of transactions per day.
+  - Reduced p99 latency by 40% by redesigning the settlement pipeline.
+
+Software Engineer, Amazon — Jul 2018 to Dec 2020
+  - Worked on the catalog search indexing pipeline.
+
+EDUCATION
+B.Tech in Computer Science, IIT Bombay, 2018

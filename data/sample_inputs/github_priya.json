@@ -1,0 +1,12 @@
+{
+  "login": "priyasharma",
+  "name": "Priya Sharma",
+  "company": "@Flipkart",
+  "blog": "https://priyasharma.dev",
+  "location": "Bangalore, India",
+  "bio": "Backend engineer. Python, Go, distributed systems. Ex-Amazon. Building scalable payment systems.",
+  "public_repos": 27,
+  "html_url": "https://github.com/priyasharma",
+  "repos_languages": ["Python", "Go", "Python", "Shell", "Python", "Go", "Dockerfile"],
+  "_note_for_adapter": "In live mode fetch https://api.github.com/users/{login} and /repos. This file simulates that response so the demo runs offline."
+}

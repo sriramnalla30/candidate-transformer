@@ -1,0 +1,7 @@
+phonenumbers
+pycountry
+python-dotenv
+groq
+pypdf
+flask
+pytest

@@ -1,0 +1,16 @@
+{
+  "_comment": "Custom config: a compact summary card. Renames fields via 'from' paths, drops provenance, keeps confidence. Demonstrates the same engine producing a different schema with no code changes.",
+  "fields": [
+    { "path": "full_name", "from": "full_name", "type": "string", "required": true },
+    { "path": "primary_email", "from": "emails[0]", "type": "string", "required": true },
+    { "path": "phone", "from": "phones[0]", "type": "string", "normalize": "E164" },
+    { "path": "current_title", "from": "headline", "type": "string" },
+    { "path": "years_experience", "from": "years_experience", "type": "number" },
+    { "path": "skills", "from": "skills[].name", "type": "string[]", "normalize": "canonical" },
+    { "path": "city", "from": "location.city", "type": "string" },
+    { "path": "country", "from": "location.country", "type": "string" }
+  ],
+  "include_confidence": true,
+  "include_provenance": false,
+  "on_missing": "null"
+}
